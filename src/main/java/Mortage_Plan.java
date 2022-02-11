@@ -10,10 +10,13 @@
 
 import java.io.File;  // Import the File class
 import java.io.FileNotFoundException;  // Import this class to handle errors
+import java.io.IOException;
 import java.util.Scanner; // Import the Scanner class to read text files
 import java.util.ArrayList; //Used for ArrayList<>
 import java.util.Arrays;
 import java.text.DecimalFormat;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 public class Mortage_Plan {
 
@@ -85,6 +88,15 @@ public class Mortage_Plan {
        }
        
       myReader.close();
+      System.out.println("Press Enter key to continue...");
+         try {
+             System.in.read();
+             System.exit(0);
+         } catch (IOException ex) {
+             Logger.getLogger(Mortage_Plan.class.getName()).log(Level.SEVERE, null, ex);
+         }
+      
+      
     } 
     
     catch (FileNotFoundException e) {
