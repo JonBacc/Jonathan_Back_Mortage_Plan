@@ -60,7 +60,7 @@ public class Mortage_Plan {
             Float interest = Float.valueOf(prospects.get(outerCounter).get(2));
             Float years = Float.valueOf(prospects.get(outerCounter).get(3));
             Float months = years * 12;
-            Float monthly_interest = interest / months;
+            Float monthly_interest = (interest / months)/100;
             Float result = 1.0f;
             
             while (months != 0) {
